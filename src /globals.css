@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+    /* SHED pastel palette: #E0BBE4, #957DAD, #D291BC, #FEC8D8, #FFDFD3 */
+    --background: 330 40% 97%;        /* near-white with warm pink blush */
+    --foreground: 280 40% 18%;        /* deep purple-grey for text */
+    --card: 0 0% 100%;
+    --card-foreground: 280 40% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 280 40% 18%;
+    --primary: 276 24% 58%;           /* #957DAD medium purple */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 308 42% 88%;         /* #E0BBE4 light lavender */
+    --secondary-foreground: 276 30% 30%;
+    --muted: 320 30% 94%;             /* soft blush muted */
+    --muted-foreground: 276 15% 52%;
+    --accent: 322 38% 70%;            /* #D291BC dusty pink */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 58%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 310 25% 87%;
+    --input: 310 25% 87%;
+    --ring: 276 24% 58%;
+    --chart-1: 276 24% 58%;           /* #957DAD */
+    --chart-2: 322 38% 70%;           /* #D291BC */
+    --chart-3: 339 75% 82%;           /* #FEC8D8 */
+    --chart-4: 17 85% 91%;            /* #FFDFD3 */
+    --chart-5: 308 42% 82%;           /* #E0BBE4 */
+    --radius: 0.75rem;
+    --sidebar-background: 320 30% 96%;
+    --sidebar-foreground: 280 40% 18%;
+    --sidebar-primary: 276 24% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 308 42% 88%;
+    --sidebar-accent-foreground: 280 40% 18%;
+    --sidebar-border: 310 25% 87%;
+    --sidebar-ring: 276 24% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
