@@ -1,0 +1,60 @@
+{
+  "name": "FlaggedAuthor",
+  "type": "object",
+  "properties": {
+    "author_name": {
+      "type": "string",
+      "description": "Name of the flagged author"
+    },
+    "source_url": {
+      "type": "string",
+      "description": "URL where the misinformation was found"
+    },
+    "source_title": {
+      "type": "string",
+      "description": "Title of the article"
+    },
+    "flag_count": {
+      "type": "number",
+      "default": 1,
+      "description": "Number of times this author has been flagged"
+    },
+    "last_flagged_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the author was last flagged"
+    },
+    "flag_type": {
+      "type": "string",
+      "enum": [
+        "misinformation",
+        "disinformation",
+        "negative_undertone",
+        "stereotype"
+      ],
+      "description": "Type of flag"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "Excerpt of the flagged content"
+    },
+    "ai_reasoning": {
+      "type": "string",
+      "description": "AI explanation of why the content was flagged"
+    }
+  },
+  "required": [
+    "author_name",
+    "flag_type"
+  ]
+}
